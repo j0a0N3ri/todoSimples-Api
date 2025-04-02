@@ -2,6 +2,7 @@ package com.example.todoSimples.Models;
 
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +65,7 @@ public class User {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -84,6 +85,7 @@ public class User {
         this.password = passoword;
     }
 
+    @JsonIgnore
     public List<Task> getTasks() {
         return this.tasks;
     }
@@ -111,5 +113,7 @@ public class User {
     public int hashCode() {
         return Objects.hash(id, username, password);
     }
+
+    
 
 }

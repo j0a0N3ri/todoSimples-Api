@@ -5,7 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import com.example.todoSimples.Models.User;
 
+
+
 @Repository
 public interface UserRepostory extends JpaRepository< User , Long> {
+
+    
     
 }
